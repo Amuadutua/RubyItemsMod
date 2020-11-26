@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    " A "
+  ],
+  "key": {
+    "X": {
+      "item": "rubyitemsmod:steel_ingot"
+    },
+    "A": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "rubyitemsmod:hammer"
+  }
+}
