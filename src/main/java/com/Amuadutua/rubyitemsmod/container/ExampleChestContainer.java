@@ -6,19 +6,24 @@ import com.Amuadutua.rubyitemsmod.tileentity.ExampleChestTileEntity;
 import com.Amuadutua.rubyitemsmod.util.RegistryHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Objects;
 
 public class ExampleChestContainer extends Container {
     public final ExampleChestTileEntity tileEntity;
     private final IWorldPosCallable canInteractWithCallable;
-
+    
     public ExampleChestContainer(final int windowId, final PlayerInventory playerInventory,
                                  final ExampleChestTileEntity tileEntity) {
         super(ModContainerTypes.EXAMPLE_CHEST.get(), windowId);

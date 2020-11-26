@@ -7,24 +7,28 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.IHasContainer;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class ExampleChestScreen extends ContainerScreen<ExampleChestContainer> implements IHasContainer<ExampleChestContainer> {
-
-    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation(RubyItems.MOD_ID, "textures/gui/example_chest.png");
-
+    /** The ResourceLocation containing the chest GUI texture. */
+    private static final ResourceLocation BACKGROUND_TEXTURE = new ResourceLocation("textures/gui/example_chest.png");
+    /** Window height is calculated with these values; the more rows */
     private final int inventoryRows;
 
-    public ExampleChestScreen(ExampleChestContainer screenContainer, PlayerInventory inv, ITextComponent titleIn, int inventoryRows) {
-        super(screenContainer, inv, titleIn);
-        this.inventoryRows = inventoryRows;
-        this.guiLeft = 0;
-        this.guiTop = 0;
-        this.xSize = 175;
-        this.ySize = 183;
+    public ExampleChestScreen(ExampleChestContainer p_i51095_1_, PlayerInventory p_i51095_2_, ITextComponent p_i51095_3_) {
+        super(p_i51095_1_, p_i51095_2_, p_i51095_3_);
+        this.passEvents = false;
+        int i = 222;
+        int j = 114;
+        this.inventoryRows = 3;
+        this.ySize = 114 + this.inventoryRows * 18;
+        this.field_238745_s_ = this.ySize - 94;
     }
-
 
     @Override
     public void render(MatrixStack p_230430_1_, int p_230430_2_, int p_230430_3_, float p_230430_4_) {
@@ -32,13 +36,6 @@ public class ExampleChestScreen extends ContainerScreen<ExampleChestContainer> i
         super.render(p_230430_1_, p_230430_2_, p_230430_3_, p_230430_4_);
         this.func_230459_a_(p_230430_1_, p_230430_2_, p_230430_3_);
     }
-
-    
-
-    //@Override
-    //protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-
-    //}
 
     @Override
     protected void func_230450_a_(MatrixStack p_230450_1_, float p_230450_2_, int p_230450_3_, int p_230450_4_) {
@@ -49,6 +46,5 @@ public class ExampleChestScreen extends ContainerScreen<ExampleChestContainer> i
         this.blit(p_230450_1_, i, j, 0, 0, this.xSize, this.inventoryRows * 18 + 17);
         this.blit(p_230450_1_, i, j + this.inventoryRows * 18 + 17, 0, 126, this.xSize, 96);
     }
-
 }
 
