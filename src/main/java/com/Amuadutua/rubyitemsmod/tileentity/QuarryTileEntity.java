@@ -85,9 +85,9 @@ public class QuarryTileEntity extends TileEntity implements ITickableTileEntity 
     }
 
     @Override
-    public void read(BlockState stateIn, CompoundNBT nbtIn) {
-        super.read(stateIn, nbtIn);
-        CompoundNBT initValues = nbtIn.getCompound("initvalues");
+    public void read(BlockState blockState,CompoundNBT compound) {
+        super.read(blockState, compound);
+        CompoundNBT initValues = compound.getCompound("initvalues");
         if (initValues != null) {
 
             this.x = initValues.getInt("x");
