@@ -92,7 +92,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register( "ruby_ore", RubyOre::new);
     public static final RegistryObject<Block> STEEL_ORE = BLOCKS.register( "steel_ore", SteelOre::new);
     public static final RegistryObject<Block> OVEN = BLOCKS.register( "oven", Oven::new);
-    public static final RegistryObject<Block> QUARRY = BLOCKS.register( "quarry", BlockQuarry::new);
+   // public static final RegistryObject<Block> QUARRY = BLOCKS.register( "quarry", BlockQuarry::new);
 
 
     // Block Items
@@ -102,5 +102,5 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(RUBY_ORE.get()));
     public static final RegistryObject<Item> STEEL_ORE_ITEM = ITEMS.register("steel_ore", () -> new BlockItemBase(STEEL_ORE.get()));
     public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(OVEN.get()));
-    public static final RegistryObject<Item> QUARRY_ITEM = ITEMS.register("quarry", () -> new BlockItemBase(QUARRY.get()));
+   // public static final RegistryObject<Item> QUARRY_ITEM = ITEMS.register("quarry", () -> new BlockItemBase(QUARRY.get()));
 }
