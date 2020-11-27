@@ -1,8 +1,5 @@
 package com.Amuadutua.rubyitemsmod;
 
-import com.Amuadutua.rubyitemsmod.init.BlockInit;
-import com.Amuadutua.rubyitemsmod.init.ModContainerTypes;
-import com.Amuadutua.rubyitemsmod.init.ModTileEntityTypes;
 import com.Amuadutua.rubyitemsmod.items.ModBow;
 import com.Amuadutua.rubyitemsmod.util.RegistryHandler;
 import net.minecraft.block.Block;
@@ -46,9 +43,6 @@ public class RubyItems
 
 
         RegistryHandler.init();
-        BlockInit.init();
-        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
-        ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -7,7 +7,6 @@ import com.Amuadutua.rubyitemsmod.items.ItemBase;
 import com.Amuadutua.rubyitemsmod.items.ModBow;
 import com.Amuadutua.rubyitemsmod.items.PoisonApple;
 import com.Amuadutua.rubyitemsmod.items.TorchBow;
-import com.Amuadutua.rubyitemsmod.tileentity.QuarryTileEntity;
 import com.Amuadutua.rubyitemsmod.tools.ModItemTier;
 import com.Amuadutua.rubyitemsmod.tools.ModItemTier2;
 import net.minecraft.block.AbstractBlock;
@@ -94,7 +93,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register( "ruby_ore", RubyOre::new);
     public static final RegistryObject<Block> STEEL_ORE = BLOCKS.register( "steel_ore", SteelOre::new);
     public static final RegistryObject<Block> OVEN = BLOCKS.register( "oven", Oven::new);
-    public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", RubyBlock::new);
+    public static final RegistryObject<Block> EXAMPLE_CHEST = BLOCKS.register( "example_chest", ExampleChest::new);
 
 
     // Block Items
@@ -104,5 +103,5 @@ public class RegistryHandler {
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () -> new BlockItemBase(RUBY_ORE.get()));
     public static final RegistryObject<Item> STEEL_ORE_ITEM = ITEMS.register("steel_ore", () -> new BlockItemBase(STEEL_ORE.get()));
     public static final RegistryObject<Item> OVEN_ITEM = ITEMS.register("oven", () -> new BlockItemBase(OVEN.get()));
-    public static final RegistryObject<Item> QUARRY_ITEM = ITEMS.register("quarry", () -> new BlockItemBase(QUARRY.get()));
+    public static final RegistryObject<Item> EXAMPLE_CHEST_ITEM = ITEMS.register("example_chest", () -> new BlockItemBase(EXAMPLE_CHEST.get()));
 }
