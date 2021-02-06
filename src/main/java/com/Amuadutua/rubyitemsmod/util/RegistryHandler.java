@@ -43,7 +43,7 @@ public class RegistryHandler {
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register( "ruby_sword", () ->
             new SwordItem(ModItemTier.RUBY, 2, -2.4F, new Item.Properties().group(RubyItems.TAB)));
     public static final RegistryObject<Item> RUBY_BOW = ITEMS.register( "ruby_bow", () ->
-            new TorchBow(new Item.Properties().group(RubyItems.TAB)));
+            new TorchBow(new Item.Properties().group(RubyItems.TAB).maxDamage(1000)));
     public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register( "ruby_pickaxe", () ->
             new PickaxeItem(ModItemTier.RUBY, 0, -2.8F, new Item.Properties().group(RubyItems.TAB)));
     public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register( "ruby_axe", () ->

@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XXX",
-    "XXX",
+    "XAX",
+    "XAX",
     " A "
   ],
   "key": {
     "X": {
-      "item": "rubyitemsmod:steel_ingot"
+      "item": "rubyitemsmod:ruby"
     },
     "A": {
       "item": "minecraft:stick"

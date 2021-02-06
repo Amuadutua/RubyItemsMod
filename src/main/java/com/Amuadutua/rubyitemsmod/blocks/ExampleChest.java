@@ -49,12 +49,12 @@ public class ExampleChest extends Block {
     ).reduce((v1, v2) -> {return VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR);}).get();
 
     public ExampleChest() {
-        super(Properties.create(Material.IRON)
-                .hardnessAndResistance(7.0f, 9.0f)
-                .sound(SoundType.ANVIL)
-                .harvestLevel(2)
+        super(Properties.create(Material.WOOD)
+                .hardnessAndResistance(4.0f, 6.0f)
+                .sound(SoundType.WOOD)
+                .harvestLevel(0)
                 .setRequiresTool()
-                .harvestTool(ToolType.PICKAXE));
+                .harvestTool(ToolType.AXE));
     }
 
     @Override
